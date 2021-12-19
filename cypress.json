@@ -1,0 +1,28 @@
+{
+  "baseUrl": "https://todomvc.com/examples/vue/",
+  "ignoreTestFiles": [
+    "**/integration/2-advanced-examples/*",
+    "**/__snapshots__/*",
+    "**/__image_snapshots__/*"
+  ],
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "video": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  },
+  "env": {
+    "userName": "AD",
+    "password": "XYZ",
+    "cypress-plugin-snapshots": {
+      "imageConfig": {
+        "threshold": 0.01
+      }
+    }
+  }
+}

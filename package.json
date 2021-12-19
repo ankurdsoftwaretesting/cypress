@@ -1,0 +1,22 @@
+{
+  "name": "Cy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "mocha:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
+    "test-browser": "npx cypress run --spec 'cypress/integration/test01.spec.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.1.1",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-multi-reporters": "^1.5.0"
+  },
+  "dependencies": {
+    "cypress-plugin-snapshots": "^1.4.4"
+  }
+}
