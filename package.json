@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "mocha:merge": "mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
+    "clean": "rm -rf mochawesome.json && rm -rf mochawesome-report && rm -rf screenshots && rm -rf cypress/results",
     "test": "cypress open",
-    "mocha:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
-    "test-browser": "npx cypress run --spec 'cypress/integration/test01.spec.js'"
+    "test:run": "cypress run",
+    "test-browser": "cypress run --spec 'cypress/integration/test02.spec.js'",
+    "test-chrome-headed": "cypress run --spec cypress/integration/test03.spec.js --browser=chrome --headed",
+    "test-firefox-headed": "cypress run --spec cypress/integration/test03.spec.js --browser=firefox --headed",
+    "test-chrome-headless": "cypress run --spec cypress/integration/test03.spec.js --browser=chrome",
+    "test-firefox-headless": "cypress run --spec cypress/integration/test03.spec.js --browser=firefox"
   },
   "keywords": [],
   "author": "",
