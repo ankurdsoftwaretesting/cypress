@@ -29,5 +29,7 @@ pipeline{
     post{
       always{
         echo "Ran cypress automation..."
+      }
     }
+   
 }
